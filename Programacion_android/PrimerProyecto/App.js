@@ -1,30 +1,33 @@
 import React, { useState } from 'react';
 import { StyleSheet, Button, Text, TextInput, View, Image, Switch } from 'react-native';
 export default function App() {
-    const [edad, setEdad] = useState(0);
-    const [nombre, setNombre] = useState(null);
-    const [apellidos, setApellidos] = useState(null);
-    const [correo, setCorreo] = useState(null);
-    const [sexo, setSexo] = useState(null);
-    const [text, setText] = useState(null);
+    const [edad, setEdad] = useState('');
+    const [nombre, setNombre] = useState('null');
+    const [apellidos, setApellidos] = useState('null');
+    const [correo, setCorreo] = useState('null');
+    const [text, setText] = useState(' ');
     const [isEnabled, setIsEnabled] = useState(false)
+    const [Escondido, setEscondido] = useState(false)
+    const [validateNumber,setvalidateNumber]=useState(false);
 
 
     function Texto(edad, correo) {
-        const regex = /^[a-zA-Z]+$/;
+        const regex = /^[0-9]*$/;
         const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+        const regN = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
 
-        if (!edad.match(regex) && !correo.text === true && Object.keys(edad).length != 0 && Object.keys(correo).length != 0) {
-            setText('Mi nombre es ' + nombre + ' con edad ' + edad + ' , y correo ' + correo + ' Sexo ' + sexo);
-
+        if (edad.match(regex) && correo.match(reg) && !edad=='' && nombre.match(regN) && apellidos.match(regN))  {
+            setText('Mi nombre es ' + nombre + ' con edad ' + edad + ' , y correo ' + correo + ' Sexo ' + (isEnabled?'Masculino':'Femenino'));
+            setEscondido(true);
         } else {
-            setText('Edad o correo invalidos')
+            setText(' ')
+            alert('Campos invalidos')
         }
 
     }
 
     return (
-        <View>
+        <View style={{color:'White'}}>
             <View style={{ flexDirection: 'row' }}>
                 <Text>Nombre: </Text>
                 <TextInput
@@ -56,6 +59,9 @@ export default function App() {
                 />
             </View>
             <View style={{ flexDirection: 'row' }}>
+            <TextInput style={validateNumber ?{borderWidth:2,height:40,borderColor: 'green'}:{borderWidth:2,height:40,borderColor: 'red'}} placeholder='Edad'
+
+onChangeText={edad => validarEdad(edad)} />
                 <Text>Edad: </Text>
                 <TextInput
                     style={{
@@ -86,38 +92,45 @@ export default function App() {
                 />
             </View>
             <View style={{ flexDirection: 'row' }}>
-                <Text>Sexo: </Text>
-                <Switch
+                <Text style={{
+                        marginTop:5
+                    }}>Sexo: </Text>
+                <Switch style={{
+                        marginLeft:45,
+                        marginTop:5
+                    }}
                     trackColor={{ false: 'aqua', true: 'pink' }}
                     thumbColor={isEnabled ? 'aqua' : 'pink'}
                     onValueChange={() => setIsEnabled(previousState => !previousState)}
                     value={isEnabled}
                 />
-                {isEnabled ? <Text style={{ alignItems: 'center' }}>  Masculino</Text> : <Text style={{ alignItems: 'center' }}>  Femenino</Text>}
+                {isEnabled ? <Text style={{ alignItems: 'center',marginTop:5 }}>  Masculino</Text> : <Text style={{ alignItems: 'center',marginTop:5 }}>  Femenino</Text>}
            </View>
             <View style={{ padding: 55 }}>
                 <Button title='Enviar'
                     onPress={() => { Texto(edad, correo) }}
                     />
             </View>
-            <Text style={{ alignItems: 'center', borderRadius:15 }}>{text}</Text>
             <View>
-                < Image
+                
+            <Text style={{ alignItems: 'center', borderRadius:15 }}>{text}</Text>
+            {
+            !Escondido
+            ?null:< Image
                     style={{
                         height: 350,
                         width: 450,
                         alignItems: 'center'
                     }}
-                    source={{
-                        uri: 'https://i.pinimg.com/600x315/2f/57/b5/2f57b5ef82d8024b39beec08a15f5a0d.jpg'
-                    }}
-                    />
+                    source={
+                        require('./mono.jpg')
+                    }
+                    />}
+            
+               
             </View>
+            
+
         </View>
     )
 }
-// if (isEnabled) {
-//     setSexo=('Masculino')
-// }else{
-//     setSexo=('Femenino')
-// }
