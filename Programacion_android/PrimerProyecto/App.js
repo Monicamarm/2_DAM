@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, Button, Text, TextInput, View, Image, Switch } from 'react-native';
+import { StyleSheet, Button, Text, TextInput, View, Image, Switch, TouchableOpacity } from 'react-native';
+import { Boton } from './Boton';
+
 export default function App() {
     const [edad, setEdad] = useState('');
     const [nombre, setNombre] = useState('null');
@@ -8,7 +10,7 @@ export default function App() {
     const [text, setText] = useState(' ');
     const [isEnabled, setIsEnabled] = useState(false)
     const [Escondido, setEscondido] = useState(false)
-    const [validateNumber,setvalidateNumber]=useState(false);
+
 
 
     function Texto(edad, correo) {
@@ -16,8 +18,8 @@ export default function App() {
         const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
         const regN = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
 
-        if (edad.match(regex) && correo.match(reg) && !edad=='' && nombre.match(regN) && apellidos.match(regN))  {
-            setText('Mi nombre es ' + nombre + ' con edad ' + edad + ' , y correo ' + correo + ' Sexo ' + (isEnabled?'Masculino':'Femenino'));
+        if (edad.match(regex) && correo.match(reg) && !edad == '' && nombre.match(regN) && apellidos.match(regN)) {
+            setText('Mi nombre es ' + nombre + ' con edad ' + edad + ' , y correo ' + correo + ' Sexo ' + (isEnabled ? 'Masculino' : 'Femenino'));
             setEscondido(true);
         } else {
             setText(' ')
@@ -27,65 +29,69 @@ export default function App() {
     }
 
     return (
-        <View style={{color:'White'}}>
+        <View style={{ flex: 1, backgroundColor: '#e0b0ff' }}>
+            <Text style={{ color: 'white', textAlign: 'center', fontSize: 50, marginBottom:35 }}>Formulario</Text>
             <View style={{ flexDirection: 'row' }}>
-                <Text>Nombre: </Text>
+                <Text style={{ color: 'white', fontSize: 18,marginBottom:15 }}>Nombre: </Text>
                 <TextInput
                     style={{
-                        marginLeft:25,
+                        marginLeft: 25,
                         padding: 0,
-                        height: 30,
+                        height: 32,
                         width: 275,
-                        borderColor: 'grey',
-                        borderWidth: 1
+                        borderColor: '#d3d3d3',
+                        borderWidth: 1,
+                        fontSize: 18
+
                     }}
                     placeholder=" Nombre"
                     onChangeText={nombre => setNombre(nombre)}
                 />
             </View>
             <View style={{ flexDirection: 'row' }}>
-                <Text>Apellidos: </Text>
+                <Text style={{ color: 'white', fontSize: 18,marginBottom:15 }}>Apellidos: </Text>
                 <TextInput
                     style={{
-                        marginLeft:16,
+                        marginLeft: 13.5,
                         padding: 0,
-                        height: 30,
+                        height: 32,
                         width: 275,
-                        borderColor: 'grey',
-                        borderWidth: 1
+                        borderColor: '#d3d3d3',
+                        borderWidth: 1,
+                        fontSize: 18
                     }}
                     placeholder=" Apellidos"
                     onChangeText={apellidos => setApellidos(apellidos)}
                 />
             </View>
             <View style={{ flexDirection: 'row' }}>
-            <TextInput style={validateNumber ?{borderWidth:2,height:40,borderColor: 'green'}:{borderWidth:2,height:40,borderColor: 'red'}} placeholder='Edad'
 
-onChangeText={edad => validarEdad(edad)} />
-                <Text>Edad: </Text>
+                <Text style={{ color: 'white', fontSize: 18,marginBottom:15 }}>Edad: </Text>
                 <TextInput
                     style={{
-                        marginLeft:48,
+                        marginLeft: 54.4,
                         padding: 0,
-                        height: 30,
+                        height: 32,
                         width: 275,
-                        borderColor: 'grey',
-                        borderWidth: 1
+                        borderColor: '#d3d3d3',
+                        borderWidth: 1,
+                        fontSize: 18
                     }}
                     placeholder=" Edad"
                     onChangeText={edad => setEdad(edad)}
                 />
             </View>
             <View style={{ flexDirection: 'row' }}>
-                <Text>Correo: </Text>
+                <Text style={{ color: 'white', fontSize: 18 ,marginBottom:15}}>Correo: </Text>
                 <TextInput
                     style={{
-                        marginLeft:35,
+                        marginLeft: 37,
                         padding: 0,
-                        height: 30,
+                        height: 32,
                         width: 275,
-                        borderColor: 'grey',
-                        borderWidth: 1
+                        borderColor: '#d3d3d3',
+                        borderWidth: 1,
+                        fontSize: 18
                     }}
                     placeholder=" Correo"
                     onChangeText={correo => setCorreo(correo)}
@@ -93,44 +99,50 @@ onChangeText={edad => validarEdad(edad)} />
             </View>
             <View style={{ flexDirection: 'row' }}>
                 <Text style={{
-                        marginTop:5
-                    }}>Sexo: </Text>
+                    marginTop: 5,
+                    fontSize: 18,
+                    color: 'white'
+                }}>Sexo: </Text>
                 <Switch style={{
-                        marginLeft:45,
-                        marginTop:5
-                    }}
+                    marginLeft: 45,
+                    marginTop: 5,
+                }}
                     trackColor={{ false: 'aqua', true: 'pink' }}
                     thumbColor={isEnabled ? 'aqua' : 'pink'}
                     onValueChange={() => setIsEnabled(previousState => !previousState)}
                     value={isEnabled}
                 />
-                {isEnabled ? <Text style={{ alignItems: 'center',marginTop:5 }}>  Masculino</Text> : <Text style={{ alignItems: 'center',marginTop:5 }}>  Femenino</Text>}
-           </View>
-            <View style={{ padding: 55 }}>
-                <Button title='Enviar'
-                    onPress={() => { Texto(edad, correo) }}
-                    />
+                {isEnabled ? <Text style={{ alignItems: 'center', marginTop: 5, color: 'white', fontSize: 18 }}>  Masculino</Text> : <Text style={{ alignItems: 'center', marginTop: 5, color: 'white', fontSize: 18 }}>  Femenino</Text>}
             </View>
+            <View >
+
+            </View>
+            <Boton onPress={() => { Texto(edad, correo) }} />
             <View>
-                
-            <Text style={{ alignItems: 'center', borderRadius:15 }}>{text}</Text>
-            {
-            !Escondido
-            ?null:< Image
-                    style={{
-                        height: 350,
-                        width: 450,
-                        alignItems: 'center'
-                    }}
-                    source={
-                        require('./mono.jpg')
-                    }
-                    />}
-            
-               
+
+                <Text style={{ alignItems: 'center' }}>{text}</Text>
+                {
+                    !Escondido
+                        ? null
+                          :
+                          (isEnabled?<Image style={{
+                            height: 434,
+                            width: 415
+                            }}
+                            source={ require('./monop.jpg') }
+                          />:<Image style={{
+                            height: 450,
+                            width: 415
+                            }}
+                            source={require('./mono.jpg')} />)
+                          
+                        }
+
+
             </View>
-            
+
 
         </View>
     )
+
 }
