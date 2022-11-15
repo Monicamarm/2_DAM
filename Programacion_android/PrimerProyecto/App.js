@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Button, Text, TextInput, View, Image, Switch, TouchableOpacity } from 'react-native';
+import { StyleSheet, Button, Text, TextInput, ScrollView,View, Image, Switch} from 'react-native';
 import { Boton } from './Boton';
 
 export default function App() {
@@ -9,8 +9,7 @@ export default function App() {
     const [correo, setCorreo] = useState('null');
     const [text, setText] = useState(' ');
     const [isEnabled, setIsEnabled] = useState(false)
-    const [Escondido, setEscondido] = useState(false)
-
+    const [escondido, setEscondido] = useState(false)
 
 
     function Texto(edad, correo) {
@@ -25,11 +24,10 @@ export default function App() {
             setText(' ')
             alert('Campos invalidos')
         }
-
     }
 
     return (
-        <View style={{ flex: 1, backgroundColor: '#e0b0ff' }}>
+        <ScrollView style={{ flex: 1, backgroundColor: '#e0b0ff' }}>
             <Text style={{ color: 'white', textAlign: 'center', fontSize: 50, marginBottom:35 }}>Formulario</Text>
             <View style={{ flexDirection: 'row' }}>
                 <Text style={{ color: 'white', fontSize: 18,marginBottom:15 }}>Nombre: </Text>
@@ -122,7 +120,7 @@ export default function App() {
 
                 <Text style={{ alignItems: 'center' }}>{text}</Text>
                 {
-                    !Escondido
+                    !escondido
                         ? null
                           :
                           (isEnabled?<Image style={{
@@ -135,14 +133,11 @@ export default function App() {
                             width: 415
                             }}
                             source={require('./mono.jpg')} />)
-                          
                         }
-
-
             </View>
 
 
-        </View>
+        </ScrollView>
     )
 
 }
