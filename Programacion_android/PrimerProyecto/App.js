@@ -1,125 +1,31 @@
-import React, { Component } from 'react';
-import { View, Text, FlatList } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+import React, { useState } from 'react';
+import { View, Text, TouchableHighlight, TouchableOpacity } from 'react-native';
 
 export default function App() {
-  const DATA = [
-    {
-      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-      title: 'Primer elemento',
-      nombre: 'Ana',
-      edad: '2000'
-    },
-    {
-      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-      title: 'Segundo elemento',
-      nombre: 'Bernat',
-      edad: '2001'
-    },
-    {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Tercero elemento',
-      nombre: 'Carmen',
-      edad: '2002'
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d32',
-      title: 'Cuarto elemento',
-      nombre: 'Daniel',
-      edad: '2003'
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d27',
-      title: 'Quinto elemento',
-      nombre: 'Estefania',
-      edad: '2004'
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d13',
-      title: 'Sexto elemento',
-      nombre: 'Fernando',
-      edad: '2005'
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d702',
-      title: 'Septimo elemento',
-      nombre: 'Grace',
-      edad: '2006'
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d207',
-      title: 'Octavo elemento',
-      nombre: 'hugo',
-      edad: '2007'
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d720',
-      title: 'Noveno elemento',
-      nombre: 'Imma',
-      edad: '2008'
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Décimo elemento',
-      nombre: '',
-      edad: ''
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Undecimo elemento',
-      nombre: '',
-      edad: ''
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Duodecimo elemento',
-      nombre: '',
-      edad: ''
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Decimotercero elemento',
-      nombre: '',
-      edad: ''
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Decimocuarto elemento',
-      nombre: '',
-      edad: ''
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Decimoquinto elemento',
-      nombre: '',
-      edad: ''
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Decimosexto elemento',
-      nombre: '',
-      edad: ''
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Decimoseptimo elemento',
-      nombre: '',
-      edad: ''
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Decimooctavo elemento',
-      nombre: '',
-      edad: ''
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Decimonoveno elemento',
-      nombre: '',
-      edad: ''
-    }, {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Bigesimo elemento',
-      nombre: '',
-      edad: ''
-    }
-  ];
-  const renderItem = ({ item }) => (
-    <View>
-      <Text>{item.title}</Text>
-    </View>
-  )
-  return (
-    <View>
-      <FlatList
-        data={DATA}
-        renderItem={renderItem}
-        keyExtractor={item => item.id}
-      />
-    </View>
-  )
+    function ExampleView(props) {
+        return <Icon name="ios-person" size={30} color="#4F8EF7" />;
+      }
+
+      
+    /*/const [count, setCount] = useState(0);
+
+    return (
+        <View>
+            <TouchableOpacity
+                style={{ alignItems: 'center', backgroundColor: 'red', padding: 10 }}
+                onPress={() => { setCount(count + 1) }}>
+                <Text>Press here</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+                style={{ alignItems: 'center', backgroundColor: 'blue', padding: 10 }}
+                onPress={() => { setCount(count + 1) }}>
+                <Text>Press here</Text>
+            </TouchableOpacity>
+            <Text>{count}</Text>
+        </View>
+    )*/
+
 
 }
