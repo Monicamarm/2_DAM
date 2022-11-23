@@ -9,33 +9,33 @@ export default function App() {
       name:'ana',
       surname:'mena',
       phone:'159634872',
-      icon:<MaterialCommunityIcons name="account" size={30} color="#4F8EF7" />
+      icon:<MaterialCommunityIcons name="vimeo" size={30} color="pink" />
     },
     {
       id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
       name:'maria',
       surname:'antonia',
       phone:'369852147',
-      icon:<MaterialCommunityIcons name="account-box" size={30} color="#4F8EF7" />
+      icon:<MaterialCommunityIcons name="account-box" size={30} color="red" />
     },
     {
       id: '58694a0f-3da1-471f-bd96-145571e29d72',
       name:'bernat',
       surname:'costa',
       phone:'147852369',
-      icon:<MaterialCommunityIcons name="account-circle" size={30} color="#4F8EF7" />
+      icon:<MaterialCommunityIcons name="account-circle" size={30} color="aqua" />
     }, {
       id: '58694a0f-3da1-471f-bd96-145571e29d32',
       name:'goyo',
       surname:'maldito',
       phone:'258369147',
-      icon:<MaterialCommunityIcons name="account-injury" size={30} color="#4F8EF7" />
+      icon:<MaterialCommunityIcons name="account-injury" size={30} color="yellowgreen" />
     }, {
       id: '58694a0f-3da1-471f-bd96-145571e29d27',
       name:'nacho',
       surname:'miguel',
       phone:'258147963',
-      icon:<MaterialCommunityIcons name="account-voice" size={30} color="#4F8EF7" />
+      icon:<MaterialCommunityIcons name="account-voice" size={30} color="white" />
     }
   ];
   const renderItem = ({ item }) => (
