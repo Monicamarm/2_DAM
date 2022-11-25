@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: rgb(239, 191, 253);
+}
+
+.flex-container{
+    background: rgb(186, 253, 236);
+    border: 1px solid black;
+}
+.caja{
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+    height: 120px;
+    width: 120px;
+
+}

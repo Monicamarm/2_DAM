@@ -46,7 +46,7 @@ nav {
     float: left;
     width: calc(80% - 40px);
     background: rgb(250, 209, 132);
-    min-height: 500px;
+    min-height: 550px;
     padding: 20px;
 }
 
@@ -54,7 +54,7 @@ aside {
     background: rgb(206, 252, 116);
     width: calc(20% - 20px);
     float: left;
-    min-height: 520px;
+    min-height: 550px;
     padding: 10px;
 }
 
@@ -68,5 +68,5 @@ footer {
 
 #carouselExampleIndicators {
     
-    width: 25%;
+    width: 35%;
 }
