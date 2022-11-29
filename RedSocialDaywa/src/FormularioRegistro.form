@@ -54,14 +54,13 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabelNombre" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabelApellidos" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabelNacimiento" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabelGenero" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabelUsuario" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabelRepetircontraseña" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabelCorreo" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                               <Component id="jTextFieldUsuario" alignment="0" max="32767" attributes="0"/>
                               <Component id="jTextFieldCorreo" alignment="0" max="32767" attributes="0"/>
@@ -70,7 +69,6 @@
                               <Component id="jTextFieldNombre" alignment="0" max="32767" attributes="0"/>
                               <Component id="jPasswordField1" alignment="0" max="32767" attributes="0"/>
                               <Component id="jPasswordField2" alignment="0" pref="498" max="32767" attributes="0"/>
-                              <Component id="jDateChooserNacimiento" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -107,12 +105,7 @@
                       <Component id="jLabelGenero" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jComboBoxGenero" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabelNacimiento" min="-2" max="-2" attributes="0"/>
-                      <Component id="jDateChooserNacimiento" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jTextFieldCorreo" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabelCorreo" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -160,11 +153,6 @@
         <Component class="javax.swing.JLabel" name="jLabelApellidos">
           <Properties>
             <Property name="text" type="java.lang.String" value="Apellidos:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabelNacimiento">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Fecha de nacimiento:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelGenero">
@@ -227,8 +215,6 @@
         <Component class="javax.swing.JPasswordField" name="jPasswordField1">
         </Component>
         <Component class="javax.swing.JPasswordField" name="jPasswordField2">
-        </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooserNacimiento">
         </Component>
       </SubComponents>
     </Container>

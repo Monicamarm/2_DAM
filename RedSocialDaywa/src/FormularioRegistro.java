@@ -36,7 +36,6 @@ public class FormularioRegistro extends javax.swing.JFrame {
         jTextFieldNombre = new javax.swing.JTextField();
         jTextFieldApellidos = new javax.swing.JTextField();
         jLabelApellidos = new javax.swing.JLabel();
-        jLabelNacimiento = new javax.swing.JLabel();
         jLabelGenero = new javax.swing.JLabel();
         jComboBoxGenero = new javax.swing.JComboBox<>();
         jLabelCorreo = new javax.swing.JLabel();
@@ -48,7 +47,6 @@ public class FormularioRegistro extends javax.swing.JFrame {
         jLabelRepetircontraseña = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
         jPasswordField2 = new javax.swing.JPasswordField();
-        jDateChooserNacimiento = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Formulario registro");
@@ -62,8 +60,6 @@ public class FormularioRegistro extends javax.swing.JFrame {
         jLabelNombre.setText("Nombre:");
 
         jLabelApellidos.setText("Apellidos:");
-
-        jLabelNacimiento.setText("Fecha de nacimiento:");
 
         jLabelGenero.setText("Genero:");
 
@@ -97,13 +93,12 @@ public class FormularioRegistro extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelNombre)
                             .addComponent(jLabelApellidos)
-                            .addComponent(jLabelNacimiento)
                             .addComponent(jLabelGenero)
                             .addComponent(jLabelUsuario)
                             .addComponent(jLabel2)
                             .addComponent(jLabelRepetircontraseña)
                             .addComponent(jLabelCorreo))
-                        .addGap(45, 45, 45)
+                        .addGap(57, 57, 57)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jTextFieldUsuario, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextFieldCorreo, javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,8 +106,7 @@ public class FormularioRegistro extends javax.swing.JFrame {
                             .addComponent(jComboBoxGenero, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldNombre, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPasswordField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 498, Short.MAX_VALUE)
-                            .addComponent(jDateChooserNacimiento, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jPasswordField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 498, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(268, 268, 268)
                         .addComponent(jLabelTexto)))
@@ -139,11 +133,7 @@ public class FormularioRegistro extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelGenero)
                     .addComponent(jComboBoxGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelNacimiento)
-                    .addComponent(jDateChooserNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(17, 17, 17)
+                .addGap(57, 57, 57)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelCorreo))
@@ -220,12 +210,10 @@ public class FormularioRegistro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonRegistrate;
     private javax.swing.JComboBox<String> jComboBoxGenero;
-    private com.toedter.calendar.JDateChooser jDateChooserNacimiento;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelApellidos;
     private javax.swing.JLabel jLabelCorreo;
     private javax.swing.JLabel jLabelGenero;
-    private javax.swing.JLabel jLabelNacimiento;
     private javax.swing.JLabel jLabelNombre;
     private javax.swing.JLabel jLabelRepetircontraseña;
     private javax.swing.JLabel jLabelTexto;
