@@ -14,11 +14,12 @@ function HomeScreen({ navigation }) {
 }
 
 function ProfileScreen({ navigation,route}) {
-  const {name,age}=route.params
+  console.log("-----route", route);
+  //const {name,age}=route.params
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text style={{ color: 'black' }}>Pantalla de Perfil</Text>
-      <Text style={{ color: 'black' }}>{name},{age}</Text>
+      <Text style={{ color: 'black' }}>{route.params.name},{route.params.age}</Text>
       <Button onPress={() => navigation.navigate("Ajustes")} title="Pasar a Ajustes" />
     </View>
   );
@@ -26,7 +27,7 @@ function ProfileScreen({ navigation,route}) {
 function SettingsScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text style={{ color: 'black' }}>Pantalla de Ajustes</Text>
+      <Text style={{ color: 'black'}}>Pantalla de Ajustes</Text>
       <Button onPress={() => navigation.navigate("Perfil")} title="Pasar a Perfil" />
     </View>
   );
