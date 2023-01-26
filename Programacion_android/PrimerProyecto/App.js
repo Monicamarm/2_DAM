@@ -18,7 +18,7 @@
 import React, { useState } from 'react';
 
 import { StyleSheet, Button, Text, Image, TextInput, View } from 'react-native';
-import Ejercicio from './components/Ejercicio4';
+import Ejercicio from './components/Ejercicio6';
 
 
 // Ejercicio 1
