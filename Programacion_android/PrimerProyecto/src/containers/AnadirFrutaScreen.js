@@ -10,7 +10,7 @@ const wait = (timeout) => {
 }
 
 
-export default function MercadoScreen() {
+export default function AnadirFrutaScreen() {
   const [fruits, setFruits] = useState(null);
   const [refreshing, setRefreshing] = useState(false);
   const [nombre, setNombre] = useState(null);
